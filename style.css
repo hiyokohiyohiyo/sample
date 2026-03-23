@@ -64,6 +64,12 @@ button {
   border: 1px solid #ccc;
 }
 
+#result {
+  font-size: 24px; /* 文字を大きく */
+  font-weight: bold;
+  margin-bottom: 10px; /* 画像との間隔 */
+}
+
 /* 状態色 */
 .answered { background: #90ee90; /* 薄い緑 */ }
 .correct { background: green; color: white; }
