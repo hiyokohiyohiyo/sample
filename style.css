@@ -42,18 +42,6 @@ button {
   border-radius: 5px;
 }
 
-#finish-btn {
-  color: black;
-}
-
-#retry-wrong-btn {
-  color: black;
-}
-
-#restart-btn {
-  color: black;
-}
-
 #question-nav {
   margin-top: 20px;
   display: flex;
