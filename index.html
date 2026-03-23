@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ポケクイズ</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>ポケクイズ</h1>
+
+<div id="loading">読み込み中...（最初は時間かかるよ～；；）</div>
+
+<div id="region-select">
+  <button onclick="startQuiz('kanto')">カントー</button>
+  <button onclick="startQuiz('johto')">ジョウト</button>
+  <button onclick="startQuiz('hoenn')">ホウエン</button>
+  <button onclick="startQuiz('sinnoh')">シンオウ</button>
+  <button onclick="startQuiz('unova')">イッシュ</button>
+  <button onclick="startQuiz('kalos')">カロス</button>
+  <button onclick="startQuiz('alola')">アローラ</button>
+  <button onclick="startQuiz('galar')">ガラル</button>
+  <button onclick="startQuiz('paldea')">パルデア</button>
+</div>
+
+<div id="quiz-area" style="display:none;">
+  <img id="pokemon-image" alt="ポケモン画像"><br>
+
+  <button onclick="prevQuestion()">← 戻る</button>
+  <input id="answer" placeholder="カタカナで入力">
+  <button onclick="nextQuestion()">次へ →</button>
+
+  <br>
+
+  <button onclick="submitAnswer()">回答</button>
+  <button onclick="finishQuiz()" id="finish-btn">終了</button>
+  <button onclick="nextQuestion()">スキップ</button>
+  <button onclick="toggleMark()" id="mark-btn">マーキング</button>
+  
+  <div id="answer-result" style="display:none;"></div>
+
+  <button id="retry-wrong-btn" style="display:none;" onclick="retryWrong()">
+    間違いだけリトライ
+  </button>
+
+  <button id="restart-btn" style="display:none;" onclick="restartQuiz()">
+    リトライ
+  </button>
+</div>
+
+<div id="question-nav"></div>
+<div id="result"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
